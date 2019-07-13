@@ -4,16 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class PermisoController extends Controller
+class InicioController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($nombre,$slug)
     {
-        return view('permiso');
+      return view('permiso',compact('nombre','slug'));
     }
 
     /**

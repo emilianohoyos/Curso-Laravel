@@ -12,11 +12,11 @@ use App\Http\Controllers\PermisoController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('foo', function () {
-    return 'Hello World';
-});
+//Route::get('/', 'InicioController@Index');
 
-Route::get('permiso', 'PermisoController@index');
+
+
+Route::get('user/{nombre}', 'PermisoController@index')->name('permiso');
+Route::get('mail/send', 'MailController@send');
+
+ 

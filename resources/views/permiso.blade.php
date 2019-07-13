@@ -1,1 +1,1 @@
-    sistema de permisos
+<a href="{{route('permiso')}}">Ir a Permisos</a>
