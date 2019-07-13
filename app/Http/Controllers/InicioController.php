@@ -11,9 +11,9 @@ class InicioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($nombre,$slug)
+    public function index()
     {
-      return view('permiso',compact('nombre','slug'));
+      return view('inicio');
     }
 
     /**

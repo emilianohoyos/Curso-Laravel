@@ -12,10 +12,7 @@ use App\Http\Controllers\PermisoController;
 |
 */
 
-//Route::get('/', 'InicioController@Index');
-
-
-
+Route::get('/', 'InicioController@Index');
 Route::get('user/{nombre}', 'PermisoController@index')->name('permiso');
 Route::get('mail/send', 'MailController@send');
 
