@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CrearTablaPermisoRol extends Migration
+class CrearTablaMenuRol extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,17 @@ class CrearTablaPermisoRol extends Migration
      */
     public function up()
     {
-        Schema::create('permiso_rol', function (Blueprint $table) {
+        Schema::create('menu_rol', function (Blueprint $table) {
             $table->unsignedBigInteger('rol_id');
-            $table->foreign('rol_id','fk_permisorol_rol')
+            $table->foreign('rol_id','fk_menurol_rol')
             ->references('id')
             ->on('rol')
             ->onDelete('restrict')
             ->onUpdate('restrict');
-            $table->unsignedBigInteger('permiso_id');
-            $table->foreign('permiso_id','fk_permisorol_permiso')
+            $table->unsignedBigInteger('menu_id');
+            $table->foreign('menu_id','fk_menurol_menu')
             ->references('id')
-            ->on('permiso')
+            ->on('menu')
             ->onDelete('restrict')
             ->onUpdate('restrict');
             $table->charset='utf8mb4';
@@ -38,6 +38,6 @@ class CrearTablaPermisoRol extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('permiso_rol');
+        Schema::dropIfExists('menu_rol');
     }
 }
